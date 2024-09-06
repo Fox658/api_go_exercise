@@ -21,6 +21,10 @@ var mockLoginDetails = map[string]LoginDetails{
 		AuthToken: "586DJA",
 		Username:  "fox",
 	},
+	"juan": {
+		AuthToken: "333GOAT",
+		Username:  "juan",
+	},
 }
 
 var mockCoinDetails = map[string]CoinDetails{
@@ -39,6 +43,10 @@ var mockCoinDetails = map[string]CoinDetails{
 	"carlos": {
 		Coins:    400,
 		Username: "fox",
+	},
+	"juan": {
+		Coins:    500,
+		Username: "juan",
 	},
 }
 
