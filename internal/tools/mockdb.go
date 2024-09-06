@@ -24,10 +24,22 @@ var mockLoginDetails = map[string]LoginDetails{
 }
 
 var mockCoinDetails = map[string]CoinDetails{
-	"alex":   {Coins: 100, Username: "alex"},
-	"jason":  {Coins: 200, Username: "jason"},
-	"marie":  {Coins: 300, Username: "marie"},
-	"carlos": {Coins: 400, Username: "fox"},
+	"alex": {
+		Coins:    100,
+		Username: "alex",
+	},
+	"jason": {
+		Coins:    200,
+		Username: "jason",
+	},
+	"marie": {
+		Coins:    300,
+		Username: "marie",
+	},
+	"carlos": {
+		Coins:    400,
+		Username: "fox",
+	},
 }
 
 func (d *mockDB) GetUserLoginDetails(username string) *LoginDetails {
@@ -41,7 +53,7 @@ func (d *mockDB) GetUserLoginDetails(username string) *LoginDetails {
 	return &clientData
 }
 
-func (d *mockDB) GetUserCoinsDetails(username string) *CoinDetails {
+func (d *mockDB) GetUserCoinDetails(username string) *CoinDetails {
 	// Simulate DB call
 	time.Sleep(time.Second * 1)
 	var clientData = CoinDetails{}

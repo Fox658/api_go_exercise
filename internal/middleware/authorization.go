@@ -5,12 +5,13 @@ import (
 	"net/http"
 
 	"github.com/Fox658/api_go_exercise/api"
+	"github.com/Fox658/api_go_exercise/internal/tools"
 	log "github.com/sirupsen/logrus"
 )
 
 var UnAuthorizedError = errors.New("Invalid username or taken.")
 
-func Authorisation(next http.Handler) http.Handler {
+func Authorization(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		var username string = r.URL.Query().Get("username")
 		var token = r.Header.Get("Authorization")

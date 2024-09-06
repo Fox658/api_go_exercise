@@ -13,7 +13,7 @@ func Handler(r *chi.Mux) {
 		// Middleware for  /account route
 		router.Use(middleware.Authorization)
 
-		router.Get("/coins", GetCoinBAlance)
+		router.Get("/coins", GetCoinBalance)
 
 	})
 
